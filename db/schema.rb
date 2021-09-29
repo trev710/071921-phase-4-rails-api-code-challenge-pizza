@@ -12,26 +12,26 @@
 
 ActiveRecord::Schema.define(version: 2021_09_28_160622) do
 
-    create_table "pizzas", force: :cascade do |t|
-      t.string "name"
-      t.string "ingredients"
-      t.datetime "created_at", precision: 6, null: false
-      t.datetime "updated_at", precision: 6, null: false
-    end
-  
-    create_table "restaurant_pizzas", force: :cascade do |t|
-      t.integer "pizza_id"
-      t.integer "restaurant_id"
-      t.integer "price"
-      t.datetime "created_at", precision: 6, null: false
-      t.datetime "updated_at", precision: 6, null: false
-    end
-  
-    create_table "restaurants", force: :cascade do |t|
-      t.string "name"
-      t.string "address"
-      t.datetime "created_at", precision: 6, null: false
-      t.datetime "updated_at", precision: 6, null: false
-    end
-  
+  create_table "pizzas", force: :cascade do |t|
+    t.string "name"
+    t.string "ingredients"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
+
+  create_table "restaurant_pizzas", force: :cascade do |t|
+    t.integer "pizza_id"
+    t.integer "restaurant_id"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+end
